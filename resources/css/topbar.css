@@ -1,0 +1,11 @@
+.top-bar{
+    background-color: rgba(0, 2, 144, 0.987);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Allow content to dictate height */
+    position: fixed; /* Fix the top bar at the top */
+    z-index: 999; /* Higher than header_section */
+    margin-bottom: 200px;
+}

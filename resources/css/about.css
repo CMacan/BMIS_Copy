@@ -1,0 +1,71 @@
+.about-container {
+  max-width: 65rem; /* 768px */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.045), 
+              0 10px 15px rgba(0, 0, 0, 0.093),
+              0 5px 10px rgba(0, 0, 0, 0.081);
+}
+
+.about-button{
+    display: flex;
+    gap: 0.5rem; /* 8px */
+    margin-bottom: 1.5rem; /* 24px */
+    font-size: 15px;
+}
+
+
+.swiper {
+  padding-top: 40px;
+  margin: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px !important; 
+  height: 30px !important;
+  background: rgba(228, 227, 199, 0.495) !important;
+  border-radius: 20% !important; 
+  margin-right: 0.1%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Reduce icon size inside buttons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px !important; 
+  color:rgba(255, 208, 0, 0.726);
+}
+
+/* Optional: Hide arrows on small screens */
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+
+/* Custom Pagination Bullets */
+/* Move the pagination below the cards */
+.swiper-pagination {
+  position: relative !important;
+  bottom: 20px !important; /* Adjust the value to move it further */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ec5959d6 !important; 
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffe922b6 !important; 
+}

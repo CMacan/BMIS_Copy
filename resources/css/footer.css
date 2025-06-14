@@ -1,0 +1,9 @@
+.upper{
+    background-color:#191717;
+}
+.copyright-container{
+    background-color: rgb(0, 0, 0);
+}
+.copyright-container p{
+    padding-bottom: 20px;
+}

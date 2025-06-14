@@ -1,0 +1,15 @@
+/* Animation Keyframes */
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tooltip {
+    display: none;
+  }
+}
+.container {
+  max-width: 95%;
+}
+
+
+

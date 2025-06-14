@@ -1,0 +1,298 @@
+.body-container{
+  width:100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.capt-container{
+    max-width:1000px ;
+}
+.officials-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  width: 90%;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.officials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+}
+
+.official-card {
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+.official-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.placeholder-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #9ca3af;
+}
+
+.official-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.official-position {
+  color: #6b7280;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .officials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Optional: Add animations */
+.official-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emergency-section {
+  width: 100%;
+  margin-top: 40px;
+  background-image: linear-gradient(rgba(2, 16, 59, 0.299), rgba(0, 0, 0, 0.5)), url('/images/emergncyContact.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding-bottom: 20px;
+}
+
+  
+  .emergency-header {
+    padding: 15px;
+    margin-bottom: 5%;
+    padding-top: 2%;
+    background-color: #000000;
+    border-bottom: 4px solid #ffffff;
+    
+  }
+
+  .emergency-header h1 {
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    
+  }
+  .emergency-header h2 {
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 23px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+
+  .emergency-header p {
+    font-weight: 500;
+    color: #ffffffa7;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);  
+    gap: 15px; 
+    max-width: 80%;
+  }
+
+  .emergency-contain{
+    margin-left: 7%;
+    margin-bottom: 6%;
+  }
+  
+  
+  .icon-container {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+
+  .contact-icon-img {
+    width: 35px;
+    height: 35px;
+  }
+
+
+  
+  .contact-details {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .back-title{
+    color: #ffee00;
+    margin-bottom:10px;
+    font-weight: 600;
+    font-size: larger;
+  }
+  
+  .detail-text {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  .contact-number {
+    margin: 0.5rem 0;
+    font-weight:500;
+  }
+  
+  .label {
+    color: #ffffff;
+    font-weight: normal;
+  }
+
+  .value {
+    text-decoration: underline;
+    font-weight:500;
+    color: #ffee00;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .emergency-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-content: center;
+      gap: 10px; /* Adjusts spacing between flip cards */
+    }
+  
+    .emergency-header h2 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .flip-card {
+    width: 260px !important;
+    height: 220px; 
+    perspective: 1000px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(228, 135, 138, 0.845);
+    padding: 30px;
+    overflow: hidden; /* Ensure content fits */
+  }
+  
+  .flip-card-front {
+    background-color: #0008769f !important;
+  }
+
+  .flip-card-front h3{
+    font-weight: 700;
+    color: #f6f6f3;
+    font-size: 15px;
+  }
+  
+  .flip-card-back {
+    background-color:rgba(0, 2, 144, 0.987) !important;
+    transform: rotateY(180deg);
+    overflow-y: auto; /* Enable scrolling if needed */
+    padding: 15px;
+    border: 2px solid white
+  }
+  
+  .details-container {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  
+  .detail-text,
+  .contact-number {
+    font-size: 14px; /* Adjust font size if text is too big */
+    margin: 5px 0;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
